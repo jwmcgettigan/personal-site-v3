@@ -1,0 +1,27 @@
+<ng-container *ngIf="project">
+  <div class="project-body">
+    <h3 class="project-name">{{project.name}}</h3>
+    <div class="project-tags">
+      <span 
+        class="project-tag"
+        *ngFor="let tag of project.tags"
+      >{{tag}}</span>
+    </div>
+    <div
+      class="project-description"
+      [innerHTML]="project.description"
+    ></div>
+    <div class="project-links">
+      <a
+        *ngFor="let link of project.links"
+        [href]="link.href"
+      ><fa-icon [icon]="link.icon"></fa-icon>{{link.text}}</a>
+    </div>
+  </div>
+  <div *ngIf="project.media as media" class="project-image">
+    <img *ngIf="!media.isVideo" [src]="media.url"/>
+    <video *ngIf="media.isVideo" autoplay loop playsinline>
+      <source [src]="media.url" type="video/mp4"/>
+    </video>
+  </div>
+</ng-container>
