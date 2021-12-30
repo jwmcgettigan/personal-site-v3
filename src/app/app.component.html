@@ -1,83 +1,26 @@
-<header>
+<!-- <header>
   <div class="profile">
-    <!-- <img src="/assets/body-shot-256x256.png" alt="Profile Picture"/> -->
+    <img src="/assets/body-shot-256x256.png" alt="Profile Picture"/>
     <h3>Justin McGettigan</h3>
     <p>Nice to meet you! I'm a software developer with a passion for XR.</p>
   </div>
-  <!-- <nav class="minimap">
-    <div class="area">
-      <div class="mini-header"></div>
-    </div>
-  </nav> -->
-  <!-- <nav>
-    <a>
-      <fa-icon [icon]=""></fa-icon>
-      About
-    </a>
-    <a>
-      <fa-icon [icon]=""></fa-icon>
-      Resume
-    </a>
-    <a>
-      <fa-icon [icon]=""></fa-icon>
-    </a>
-  </nav> -->
-  <a 
-    target="_blank"
-    rel="noopener noreferrer"
-    class="email"
-    href="mailto:jwmcgettigan@gmail.com"
-    title="My Email"
-  >
-    jwmcgettigan@gmail.com
-  </a>
-  <div class="links">
-    <a 
-      *ngFor="let sn of socialNetworks"
-      target="_blank"
-      rel="noopener noreferrer"
-      [href]="sn.url"
-      [title]="sn.name"
-    >
-      <fa-icon [icon]="sn.icon"></fa-icon>
-    </a>
+</header> -->
+
+<header id="banner">
+  <div id="image">
+    <img src="/assets/cosmos_background.jpg"/>
   </div>
 </header>
+
+<nav id="navbar">
+  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+  <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Projects</a>
+  <a routerLink="/resume" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Resume</a>
+  <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About</a>
+</nav>
+
 <main>
-  <!-- 
-    
-   -->
-  <!-- <router-outlet></router-outlet> -->
-  <div class="column intro">
-    <div id="about-me">
-      <h2>Introduction</h2>
-      <p>Hello there! Here's a little bit about myself.</p>
-        <ul>
-          <li>My name is Justin McGettigan.</li>
-          <li>I live in <a href="https://en.wikipedia.org/wiki/Florida">Florida</a>.</li>
-          <li>I studied computer science at <a href="https://en.wikipedia.org/wiki/Florida_Polytechnic_University">Florida Polytechnic University</a>.</li>
-          <li>I have an keen interest in <a href="https://en.wikipedia.org/wiki/Extended_reality">XR</a> and the possibilities of the <a href="https://en.wikipedia.org/wiki/Metaverse">metaverse</a>.</li>
-        </ul>
-      <p>
-        Besides exploring the virtual frontier, I also love gaming, rock-climbing, and art.
-      </p>
-      <p>
-        My favorite courses at my university were <a href="https://en.wikipedia.org/wiki/Computer_vision">Computer Vision</a>, <a href="https://en.wikipedia.org/wiki/Autonomous_robot">Autonomous Systems</a>, and <a href="https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction">Human-Computer Interaction</a>.  You can see these topics' relavance in my projects.
-      </p>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-      <app-project-card
-        *ngFor="let project of projects"
-        [project]="project"
-      ></app-project-card>
-    </div>
-  </div>
-  <pdf-viewer [src]="pdfSrc" 
-    [render-text]="true"
-    [original-size]="true"
-    [autoresize]="true"
-    [show-borders]="false"
-    (page-rendered)="pageRendered()"
-  ></pdf-viewer>
+  <router-outlet></router-outlet>
 </main>
+
+<!-- <app-resume></app-resume> -->

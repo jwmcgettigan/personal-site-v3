@@ -1,0 +1,60 @@
+:host {
+	display: grid;
+	gap: 0.75rem;
+	padding: 0.75rem;
+}
+
+.filter {
+	height: 2rem;
+	text-align: center;
+	//margin: 0px 10px 10px 10px;
+	background: #3f4d4d;
+	padding: 5px;
+	font-size: 24px;
+}
+
+.projectCards {
+	display: flex;
+	gap: 0.75rem;
+
+	.projectCard {
+		display: inline-block;
+		vertical-align: top;
+		background: #3f4d4d;
+		width: 200px;
+		height: 300px;
+		//border-radius: 20% 20% 0 0;
+
+		.image {
+			//background-color: indianred;
+			overflow: hidden;
+			display: flex;
+	
+			img {
+				width: 200px;
+				height: 200px;
+				object-fit: cover;
+				object-position: center;
+				//border-radius: 20%;
+			}
+		}
+
+		.description {
+			padding: 7px 5px 0 5px;
+			text-align: center;
+			font-size: 14px;
+			display: grid;
+			gap: 0.5rem;
+
+			h2 {
+				margin: 0;
+				font-weight: normal;
+				font-size: 20px;
+			}
+		}
+
+		&:hover {
+			background: #5f6b6b;
+		}
+	}
+}

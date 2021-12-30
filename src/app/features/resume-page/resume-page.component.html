@@ -1,0 +1,18 @@
+<div class="leftColumn">
+	<div class="header">
+		<span>Downloads</span>
+		<div class="download-formats">
+			<a 
+				*ngFor="let downloadFormat of downloadFormats"
+				[href]="googleDocLink + '/export?format=' + downloadFormat.format"
+				class="downloadLink"
+			>
+				<fa-icon [icon]="downloadFormat.icon"></fa-icon>
+			</a>
+		</div>
+	</div>
+	<div class="blogEntry">
+		<app-resume></app-resume>
+	</div>
+</div>
+<app-right-column></app-right-column>

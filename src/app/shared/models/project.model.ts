@@ -17,4 +17,5 @@ export interface Project {
   description: string;
   links: ProjectLink[];
   media: ProjectMedia;
+  markdown: string;
 }

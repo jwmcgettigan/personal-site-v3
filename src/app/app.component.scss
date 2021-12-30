@@ -1,211 +1,65 @@
 :host {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  padding: 0.5rem;
-  gap: 2rem;
-  background-color: rgb(238, 240, 241);
-  //align-content: flex-start;
+	display: block;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 1px;
+	background: #33383c;
 }
 
-header {
-  display: grid;
-  gap: 1rem;
-  //grid-template-rows: min-content min-content min-content;
-  align-content: flex-start;
-  height: fit-content;
-  width: 16rem;
-  padding: 1rem;
+header#banner {
+	text-align: center;
+	vertical-align: middle;
+	font-size: 64px;
+	background: #33383c;
+	//font-family: JosefinSlab, serif;
+	height: 15rem;
+	//padding: 0.75rem;
 
-  background: #1f2326;
-  color: rgba(255,255,255,0.8);
+	div#image {
+		height: 100%;
+		width: 100%;
 
-  .profile {
-    display: grid;
-    justify-items: center;
-    gap: 0.5rem;
+		background-color: indianred;
+		overflow: hidden;
+		display: flex;
+		/* align-items: center;
+		justify-content: center; */
 
-    img {
-      position: relative;
-      width: 5rem;
-      border-radius: 50%;
-      border: 3px solid rgba(31, 35, 38, 1.0);
-      box-shadow: 0 0 0 3px rgba(59, 54, 47, 1.0);
-    }
+		img {
+			width: 100%;
+			//height: 100%;
+			object-fit: cover;
+    	object-position: center;
+		}
+	}
+}
 
-    h3 {
-      font-weight: 500;
-      font-size: 36px;
-      text-align: right;
-      font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif", HelveticaNeue-CondensedBlack;
-    }
+nav#navbar {
+	//font-family: JosefinSlab, serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	display: block;
+	background: #3f4d4d;
+	height: 32px;
+	font-size: 24px;
+	line-height: 32px;
 
-    p {
-      font-style: italic;
-      opacity: 0.6;
-      text-align: right;
-    }
-  }
+	a {
+		display: inline-block;
+		padding: 0 20px 0 20px;
+		border: 0;
+		text-decoration: none;
+		color: #f1f1f3;
 
-  .minimap {
-    position: relative;
-    border: 1px solid #999;
-    height: 30rem;
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    padding-top: 0.25rem;
-
-    .area {
-      width: 15.25rem;
-      //width: 5rem;
-      height: 8.58rem;
-      border: 1px solid #ccc;
-      background-color: rgba(255,255,255,0.1);
-
-      &:hover {
-        background-color: rgba(255,255,255,0.2);
-        cursor: move;
-      }
-
-      .mini-header {
-        background-color: black;
-        width: 2rem;
-        height: 5rem;
-        margin: 0.5rem;
-      }
-    }
-  }
-
-  .email {
-    display: flex;
-    font-family: Rubik;
-    font-size: 0.75rem;
-    width: 100%;
-    text-align: center;
-
-    &::before, &::after {
-      content: "";
-      display: inline-block;
-      height: 1px;
-      width: 2rem;
-      margin: 0 auto;
-      transform: translateY(0.5rem);
-      background-color: rgba(255,255,255,0.8);
-    }
-
-    &:hover {
-      color: lightseagreen;
-    }
-  }
-
-  .links {
-    height: max-content;
-    display: grid;
-    grid-auto-flow: column;
-    justify-items: center;
-    margin-top: -1rem;
-
-    a {
-      display: flex;
-      align-items: center;
-
-      &:hover {
-        color: lightseagreen;
-      }
-    }
-    
-    fa-icon {
-      color: rgba(255,255,255,0.8);
-      font-size: 2rem;
-
-      &:hover {
-        color: lightseagreen;
-      }
-    }
-  }
+		&.active, &:hover {
+			background: #33383c;
+		}
+		&:hover {
+			color: indianred;
+		}
+	}
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr min-content;
-  gap: 2rem;
-
-  .column {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .intro {
-    grid-template-rows: min-content 1fr;
-  }
-
-  /* .project-card {
-    width: 100%;
-    height: 8rem;
-    background-color: white;
-    border: 1px solid #666;
-    padding: 1rem 2rem;
-    box-sizing: border-box;
-  } */
-
-  #about-me {
-    //font-size: 1.1rem;
-    //height: 50rem;
-    //width: 40rem;
-    height: fit-content;
-    background-color: white;
-    border: 1px solid rgba(8, 9, 10, 0.25);
-
-    padding: 1rem 2rem;
-    box-sizing: border-box;
-  }
-
-  #projects {
-    //width: 40rem;
-    height: auto;
-    background-color: white;
-    border: 1px solid rgba(8, 9, 10, 0.25);
-
-    padding: 1rem 2rem;
-    box-sizing: border-box;
-
-    display: grid;
-    gap: 1rem;
-    align-content: flex-start;
-  }
-
-  pdf-viewer {
-    display: block;
-    height: 57rem;
-    width: 55rem;
-    //border: 1px solid rgba(8, 9, 10, 0.25);
-
-    ::ng-deep & > div {
-      overflow: hidden;
-    }
-
-    ::ng-deep .ng2-pdf-viewer-container {
-      overflow: visible;
-      position: absolute!important;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-
-      .page {
-        border: 1px solid rgba(8, 9, 10, 0.25);
-      }
-    }
-  }
-}
-
-::ng-deep a {
-  color: darkcyan;
-
-  &:hover {
-    color: darkcyan;
-    text-decoration: underline;
-    text-decoration-color: darkcyan;
-    cursor: pointer;
-  }
+	display: block;
 }

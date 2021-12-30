@@ -1,10 +1,43 @@
+import { ProjectPageComponent } from './features/project-page/project-page.component';
+import { AboutPageComponent } from './features/about-page/about-page.component';
+import { ResumePageComponent } from './features/resume-page/resume-page.component';
+import { ProjectsPageComponent } from './features/projects-page/projects-page.component';
+import { HomepageComponent } from './features/homepage/homepage.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Route, RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+	{
+		path: '',
+		component: HomepageComponent
+	},
+	{
+		path: 'projects',
+		component: ProjectsPageComponent
+	},
+	{
+		path: 'resume',
+		component: ResumePageComponent
+	},
+	{
+		path: 'about',
+		component: AboutPageComponent
+	},
+	{
+		path: 'blog/:markdown',
+		component: ProjectPageComponent
+	},
+	/* {
+		path: '**',
+		component: HomepageComponent
+	} */
+].map((route: Route) => {
+	route.pathMatch = 'full';
+	return route;
+});
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }

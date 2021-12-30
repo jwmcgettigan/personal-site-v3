@@ -1,0 +1,28 @@
+:host {
+  
+}
+
+pdf-viewer {
+  display: block;
+  height: 56rem;
+  //width: 44.1rem;
+  width: 100%;
+  //border: 1px solid rgba(8, 9, 10, 0.25);
+
+  ::ng-deep & > div {
+    overflow: hidden;
+  }
+
+  ::ng-deep .ng2-pdf-viewer-container {
+    //overflow: visible;
+    position: absolute!important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .page {
+      //border: 1px solid rgba(8, 9, 10, 0.25);
+    }
+  }
+}
