@@ -44,3 +44,7 @@ deploy.js
 # System Files
 .DS_Store
 Thumbs.db
+
+# Environment Files
+environment.ts
+environment.prod.ts
