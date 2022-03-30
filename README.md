@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/jwmcgettigan/personal-site-v3/main/src/assets/logo.png" width="100" />
+  <img alt="Logo" src="/src/assets/logo.png" width="100" />
 </div>
 
 <h1 align="center">
@@ -15,4 +15,4 @@
   <a href="https://github.com/jwmcgettigan/personal-site-v2" target="_blank">v2</a>
 </p>
 
-![demo](https://raw.githubusercontent.com/jwmcgettigan/personal-site-v3/main/src/assets/demo.png)
+![demo](/src/assets/demo.png)
