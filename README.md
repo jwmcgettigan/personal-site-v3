@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-  The fourth iteration of <a href="https://jwmcgettigan.com" target="_blank">jwmcgettigan.com</a> built with <a href="https://angular.io/" target="_blank">Angular</a> and hosted on a <a href="https://www.digitalocean.com/" target="_blank">DigitalOcean</a> VPS.
+  The third iteration of <a href="https://jwmcgettigan.com" target="_blank">jwmcgettigan.com</a> built with <a href="https://angular.io/" target="_blank">Angular</a> and hosted on a <a href="https://www.digitalocean.com/" target="_blank">DigitalOcean</a> VPS.
 </p>
 
 <p align="center">
