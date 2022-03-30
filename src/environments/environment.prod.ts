@@ -1,5 +1,0 @@
-export const environment = {
-  production: true,
-  apiUrl: 'https://api.jwmcgettigan.com',
-  authToken: 'Bearer d036448a922bb5ec03fd48b5e985ccd25ef735fad54255a5b71dce57c9707ec2d606256758af14b5d00c040c0e13470bcf11bd677022fb2d3a49dfc3dafc8056091d6aa3f6c7ce8955d2c4e6db00d56064bf0249740635f75449071235c8bede5b33bdc046e3ebabf78fb33988fb0542cd6dd40b8278239a8470c6bb38f52965'
-};
