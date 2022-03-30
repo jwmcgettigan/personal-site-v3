@@ -1,0 +1,68 @@
+:host {
+	width: min-content;
+}
+
+.projectCard {
+	display: grid;//inline-block;
+	vertical-align: top;
+	background: #3f4d4d;
+	//max-width: 200px;
+	min-width: 140px;
+	//height: 300px;
+
+	max-width: 200px;
+	border-radius: 5px;
+
+	::ng-deep .media {
+		min-height: 200px;
+		width: 200px;
+		height: 100%;
+		border-radius: 5px 5px 0 0;
+	}
+
+	@media (min-width: 600px) {
+		max-width: 200px;
+	}
+
+	.description {
+		display: grid;
+		align-content: flex-start;
+		padding: 7px 5px 0 5px;
+		text-align: center;
+		font-size: 14px;
+		display: grid;
+		gap: 0.5rem;
+		height: 100px;
+
+		h2 {
+			margin: 0;
+			font-weight: normal;
+			font-size: 20px;
+		}
+
+		p {
+			line-height: 1rem;
+		}
+	}
+
+	&:hover {
+		background: #5f6b6b;
+	}
+}
+
+@media (max-width: 600px) {
+	.projectCard {
+		width: auto;
+
+		.description {
+
+			h2 {
+				font-size: 19px;
+			}
+
+			p {
+				font-size: 0.7rem;
+			}
+		}
+	}
+}

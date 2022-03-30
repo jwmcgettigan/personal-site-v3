@@ -2,9 +2,12 @@
 @import 'prismjs/themes/prism-twilight.css';
 @import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 @import 'prismjs/plugins/line-highlight/prism-line-highlight.css';
+@import 'github-markdown-css/github-markdown.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-	margin: 0;
+	//margin: 0;
 	position: relative;
 }
 
@@ -16,15 +19,61 @@ a, a:hover {
 html, body {
 	margin: 0;
 	padding: 0;
-	font-family: Verdana;
+	font-family: Poppins;
 	font-size: 17px;
 	background: #26272b;
 	color: #d0d7d9;
 	tab-size: 4;
+
+  @media (max-width: 799px) {
+    font-size: 16px;
+  }
 }
 
 *::selection {
 	background-color: #c01f2f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Poppins !important;
+}
+
+.blogEntry {
+  //min-height: 30rem;
+  display: grid;
+  //gap: 1rem;
+  //padding: 1rem 2rem 1.5rem 2rem;
+  //overflow: hidden;
+}
+
+markdown {
+  //font-family: Poppins;
+  display: block;
+  background-color: #5f6b6b;
+  padding: 1rem 2rem 2rem 2rem;
+  overflow: hidden;
+
+  a {
+    text-decoration: underline;
+    //color: rgb(207, 152, 152);
+    color: white;
+    &:hover {
+      text-decoration: underline;
+      color: indianred;
+    }
+  }
+  p {
+    //margin: 20px 0;
+    line-height: 145%;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    //left: -1rem;
+    padding: 7px 0;
+    margin: 0;
+  }
+  iframe {
+    margin: 0 auto;
+  }
 }
 
 /* html, body {

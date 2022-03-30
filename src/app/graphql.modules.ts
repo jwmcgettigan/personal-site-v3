@@ -1,0 +1,1 @@
+const uri = 'http://localhost:1337/graphql';

@@ -1,18 +1,48 @@
-<div class="leftColumn">
-	<div class="header">
-		<span>Downloads</span>
-		<div class="download-formats">
-			<a 
-				*ngFor="let downloadFormat of downloadFormats"
-				[href]="googleDocLink + '/export?format=' + downloadFormat.format"
-				class="downloadLink"
-			>
-				<fa-icon [icon]="downloadFormat.icon"></fa-icon>
-			</a>
+<div class="header">
+	<div class="header-section flex">
+		<a 
+			class="drive-link"
+			[href]="googleDocLink"
+			target="_blank"
+		>
+			<fa-icon [icon]="faGoogleDrive"></fa-icon>
+		</a>
+		<div class="downloads">
+			<span>Downloads</span>
+			<div class="download-formats">
+				<a 
+					*ngFor="let downloadFormat of downloadFormats"
+					[href]="googleDocLink + '/export?format=' + downloadFormat.format"
+					class="downloadLink"
+				>
+					<fa-icon [icon]="downloadFormat.icon"></fa-icon>
+				</a>
+			</div>
 		</div>
 	</div>
-	<div class="blogEntry">
-		<app-resume></app-resume>
+	<div class="header-section">
+		<a href="https://www.jwmcgettigan.com">www.jwmcgettigan.com</a>
+		<a href="https://linkedin.com/in/jwmcgettigan">linkedin.com/in/jwmcgettigan</a>
+		<a href="https://github.com/jwmcgettigan">github.com/jwmcgettigan</a>
+	</div>
+	<div class="header-section">
+			<a href="tel:+13525859655">(352) 585-9655</a>
+			<a href="mailto:hello@jwmcgettigan.com">hello@jwmcgettigan.com</a>
+			<a href="https://www.google.com/maps/place/St.+Petersburg,+FL">Saint Petersburg, FL</a>
 	</div>
 </div>
-<app-right-column></app-right-column>
+<div class="blogEntry">
+	<!-- <app-resume></app-resume> -->
+	<markdown
+		lineNumbers
+		[data]="resumeContent"
+	>
+	</markdown>
+	<!-- <a 
+		class="drive-link"
+		[href]="googleDocLink"
+		target="_blank"
+	>
+		<fa-icon [icon]="faGoogleDrive"></fa-icon>
+	</a> -->
+</div>

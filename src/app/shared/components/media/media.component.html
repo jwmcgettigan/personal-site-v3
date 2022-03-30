@@ -1,0 +1,9 @@
+<div class="media" *ngIf="media">
+	<img *ngIf="!media.isVideo" [src]="media.url"/>
+	<video *ngIf="media.isVideo" autoplay loop playsinline>
+		<source [src]="media.url" type="video/mp4"/>
+	</video>
+</div>
+<div class="media empty" *ngIf="media == null">
+	<fa-icon [icon]="faImage"></fa-icon>
+</div>

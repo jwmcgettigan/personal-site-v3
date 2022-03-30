@@ -1,4 +1,4 @@
-import { ApiService } from './../../core/services/api.service';
+import { ApiService } from '@core/services/api.service';
 import { PdfViewerComponent } from 'ng2-pdf-viewer';
 import { Component, OnInit, ViewChild } from '@angular/core';
 

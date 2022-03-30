@@ -1,12 +1,14 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { ApiService } from './../../core/services/api.service';
-import { Social } from './../../shared/models/social.model';
+import { ApiService } from '@core/services/api.service';
+import { Social } from '@shared/models/social.model';
 import { Component, OnInit } from '@angular/core';
-import { faFileCode, faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faFileCode, faFilePdf, faFileWord } from '@fortawesome/free-solid-svg-icons';
+import { faGoogleDrive } from '@fortawesome/free-brands-svg-icons';
 
 interface DownloadFormat {
   format: string;
-  icon: IconDefinition
+  icon: IconDefinition;
+  color: string;
 }
 
 @Component({
@@ -22,13 +24,24 @@ export class ResumePageComponent implements OnInit {
   downloadFormats: DownloadFormat[] = [
     {
       format: 'pdf',
-      icon: faFilePdf
+      icon: faFilePdf,
+      color: '#ff4133'
+    },
+    {
+      format: 'docx',
+      icon: faFileWord,
+      color: '#5d91d5'
     },
     {
       format: 'html',
-      icon: faFileCode
+      icon: faFileCode,
+      color: '#e54c21'
     }
   ];
+
+  faGoogleDrive = faGoogleDrive;
+
+  resumeContent: string;
 
   constructor(
     private api: ApiService
@@ -38,6 +51,9 @@ export class ResumePageComponent implements OnInit {
     this.api.getSocials().subscribe(socials => {
       this.socialNetworks = socials;
     });
+    this.api.getResume().subscribe(res => {
+      this.resumeContent = res.data.attributes.content;
+    })
   }
 
 }

@@ -1,0 +1,26 @@
+<div class="profileCard">
+	<div class="description">
+		<h4>Justin McGettigan</h4>
+		<p>A software engineer with a passion for XR.</p>
+	</div>
+	<a 
+		target="_blank"
+		rel="noopener noreferrer"
+		class="email"
+		href="mailto:jwmcgettigan@gmail.com"
+		title="My Email"
+	>
+		hello@jwmcgettigan.com
+	</a>
+	<div class="links">
+		<a 
+			*ngFor="let sn of socialNetworks"
+			target="_blank"
+			rel="noopener noreferrer"
+			[href]="sn.url"
+			[title]="sn.name"
+		>
+			<fa-icon [icon]="sn.icon"></fa-icon>
+		</a>
+	</div>
+</div>

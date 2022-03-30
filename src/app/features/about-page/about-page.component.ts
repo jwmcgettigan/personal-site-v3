@@ -1,5 +1,5 @@
-import { ApiService } from './../../core/services/api.service';
-import { Social } from './../../shared/models/social.model';
+import { ApiService } from '@core/services/api.service';
+import { Social } from '@shared/models/social.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutPageComponent implements OnInit {
 
   socialNetworks: Social[];
+  pageContent: string;
 
   constructor(
     private api: ApiService
@@ -18,6 +19,9 @@ export class AboutPageComponent implements OnInit {
   ngOnInit(): void {
     this.api.getSocials().subscribe(socials => {
       this.socialNetworks = socials;
+    });
+    this.api.getAboutPage().subscribe(res => {
+      this.pageContent = res.data.attributes.content;
     });
   }
 

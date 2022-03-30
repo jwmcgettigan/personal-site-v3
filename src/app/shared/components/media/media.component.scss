@@ -1,0 +1,30 @@
+.media {
+	display: flex;
+	overflow: hidden;
+	border: 1px solid rgb(208, 215, 217, 0.1);
+
+	img, video {
+		display: inline;
+		box-sizing: border-box;
+		object-fit: cover;
+		object-position: center top;
+		height: 100%;
+		width: 100%;
+	}
+	
+	&.empty {
+		//background-color: #999;
+		background: #101010;
+		justify-content: center;
+		align-items: center;
+
+		fa-icon {
+			font-size: 4rem;
+		}
+	}
+	/* & > div {
+		background: center top / cover no-repeat rgb(0,0,0);
+		height: 100%;
+		width: auto;
+	} */
+}

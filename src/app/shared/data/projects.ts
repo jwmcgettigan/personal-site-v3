@@ -4,6 +4,7 @@ import { Project } from './../models/project.model';
 
 export const projects: Project[] = [{
 	name: "Project Euler",
+	slug: "project-euler",
 	tags: ["python", "javascript", "math"],
 	description: "My answers to the Project Euler problems.",
 	links: [{
@@ -17,6 +18,7 @@ export const projects: Project[] = [{
 	markdown: ""
 }, {
 	name: "Renegade",
+	slug: "renegade",
 	tags: ['computer vision', 'python', 'opencv', 'sensor fusion', 'autonomous systems'],
 	description: "Renegade is a level 3 autonomous vehicle built for my A.S. course.",
 	links: [{
@@ -30,6 +32,7 @@ export const projects: Project[] = [{
 	markdown: ""
 }, {
 	name: "PhoenixHacks Live",
+	slug: "phoenixhacks-live",
 	tags: ['javascript', 'nodejs', 'reactjs', 'HTML/CSS'],
 	description: "The live site for PhoenixHacks 2020.",
 	links: [{

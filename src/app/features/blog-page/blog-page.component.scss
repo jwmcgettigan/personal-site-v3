@@ -1,0 +1,44 @@
+:host {
+
+	::ng-deep markdown {
+
+		img, video {
+			max-width: 100%;
+			border-radius: 5px;
+		}
+	}
+}
+
+	/* .devlog {
+		text-align: center;
+    background: #3f4d4d;
+    padding: 5px;
+    font-size: 24px;
+	} */
+
+.blogEntries {
+	display: grid;
+	gap: 0.75rem;
+
+	.blogEntry {
+		background: #5f6b6b;
+		//padding: 1rem 2rem 1.5rem 2rem;
+
+		//min-height: 30rem;
+		//display: grid;
+		//gap: 1rem;
+		//overflow: hidden;
+
+		.readmore {
+			text-decoration: underline;
+			width: fit-content;
+		}
+
+		a {
+			&:hover {
+				text-decoration: underline;
+				color: indianred;
+			}
+		}
+	}
+}

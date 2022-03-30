@@ -1,0 +1,11 @@
+<div class="blogEntry">
+	<h1><a [href]="link">
+		{{blogEntry.title}}
+	</a></h1>
+	<!-- <a class="image"><img/></a> -->
+	<a class="image" [href]="link">
+		<app-media [media]="media"></app-media>
+	</a>
+	<!-- <p>{{blogEntry.description}}</p> -->
+	<a class="readmore" [href]="link">...Read More</a>
+</div>

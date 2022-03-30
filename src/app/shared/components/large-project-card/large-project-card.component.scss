@@ -1,0 +1,90 @@
+:host {
+  height: fit-content;//10rem;
+  width: 100%;
+  //background-color: linen;
+  //border: 1px solid #999;
+  background: #5f6b6b;
+  //border-radius: 5px;
+
+  display: grid;
+  //grid-template-columns: 1fr 0.5fr;
+  //grid-template-columns: 1fr 200px;
+  grid-template-columns: 200px 1fr;
+  border-radius: 5px;
+
+  ::ng-deep .media {
+		height: 100%;
+    min-height: 200px;
+		width: 200px;
+    border-radius: 5px 0 0 5px;
+	}
+
+  .project-body {
+    display: grid;
+    gap: 0.5rem;
+    align-content: flex-start;
+    padding: 1rem;
+
+    .project-name {
+
+    }
+    .project-tags {
+      display: flex;
+      gap: 0.25rem;
+      flex-wrap: wrap;
+
+      .project-tag {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-align: center;
+        //background: #d0cccc;
+        //background: rgb(120, 110, 97, 0.855);
+        border-radius: 5px;
+        background-color: #404040;
+        //color: #404040;
+        //color: rgba(255, 255, 255, 0.855);
+        //transition: color 1s, background 1s;
+
+        &:hover {
+          //color: #333;
+          cursor: pointer;
+        }
+      }
+    }
+    .project-description {
+
+    }
+    .project-links {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+
+      a {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+        //border: 1px solid darkcyan;
+        border: 1px solid #d0d7d9;
+        //border-radius: 5px;
+        padding: 0.25rem 0.75rem;
+        width: fit-content;
+        font-weight: 500;
+        //color: darkcyan;
+
+        //color: #5f6b6b;
+        //background-color: #d0d7d9;
+
+        &:hover {
+          //color: #eee;
+          //background-color: darkcyan;
+          //color: #d0d7d9;
+          //background-color: #5f6b6b;
+          background-color: rgb(208, 215, 217, 0.3);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+

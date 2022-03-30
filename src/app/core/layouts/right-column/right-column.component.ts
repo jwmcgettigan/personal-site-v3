@@ -1,6 +1,5 @@
-import { ApiService } from './../../services/api.service';
-import { Project } from './../../../shared/models/project.model';
-import { Social } from './../../../shared/models/social.model';
+import { ApiService } from '@core/services/api.service';
+import { Project, Project2 } from '@shared/models/project.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,19 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightColumnComponent implements OnInit {
 
-  socialNetworks: Social[];
-  projects: Project[];
+  projects: Project2[];
 
   constructor(
     private api: ApiService
   ) { }
 
   ngOnInit(): void {
-    this.api.getSocials().subscribe(socials => {
-      this.socialNetworks = socials;
-    });
-    this.api.getProjects().subscribe(projects => {
-      this.projects = projects;
+    this.api.getProjects2().subscribe(projects => {
+      this.projects = projects.slice(0, 3);
     });
   }
 

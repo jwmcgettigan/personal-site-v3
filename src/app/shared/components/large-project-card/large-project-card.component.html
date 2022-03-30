@@ -1,0 +1,28 @@
+<ng-container *ngIf="project">
+  <app-media [media]="media"></app-media>
+  <div class="project-body">
+    <h3 class="project-name">{{project.title}}</h3>
+    <!-- <div class="project-tags">
+      <span 
+        class="project-tag"
+        *ngFor="let tag of project.tags"
+      >{{tag}}</span>
+    </div> -->
+    <div
+      class="project-description"
+      [innerHTML]="project.description"
+    ></div>
+    <div class="project-links">
+      <a
+        *ngFor="let link of project.links"
+        [href]="link.url"
+      ><fa-icon [icon]="faIcon[link.icon]"></fa-icon>{{link.title}}</a>
+    </div>
+  </div>
+  <!-- <div class="project-links">
+    <a
+      *ngFor="let link of project.links"
+      [href]="link.href"
+    ><fa-icon [icon]="link.icon"></fa-icon>{{link.text}}</a>
+  </div> -->
+</ng-container>

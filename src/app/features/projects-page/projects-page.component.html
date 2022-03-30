@@ -1,18 +1,9 @@
-<div class="filter">
+<!-- <div class="filter">
 
-</div>
+</div> -->
 <div class="projectCards">
-	<a
+	<app-project-card 
 		*ngFor="let project of projects"
-		class="projectCard"
-		[href]="project.links[0].href"
-	>
-		<div class="image">
-			<img [src]="project.media.url"/>
-		</div>
-		<div class="description">
-			<h2>{{project.name}}</h2>
-			<p>{{project.description}}</p>
-		</div>
-	</a>
+		[project]="project"
+	></app-project-card>
 </div>

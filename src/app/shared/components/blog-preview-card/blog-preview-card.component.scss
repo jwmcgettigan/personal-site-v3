@@ -1,0 +1,41 @@
+.blogEntry {
+	background: #5f6b6b;
+	padding: 1rem 2rem 1.5rem 2rem;
+
+	display: grid;
+	align-content: flex-start;
+	border-radius: 5px;
+
+	@media (max-width: 799px) {
+		padding: 1rem 1rem 1.5rem 1rem;
+	}
+
+	.image {
+
+		::ng-deep .media {
+			height: 400px;
+			border-radius: 5px;
+		}
+
+		@media (max-width: 799px) {
+			::ng-deep .media {
+				height: 200px;
+			}
+		}
+	}
+
+	.readmore {
+		text-decoration: underline;
+		width: fit-content;
+		white-space: nowrap;
+		margin-top: 1rem;
+	}
+
+	a {
+		&:hover {
+			text-decoration: underline;
+			color: indianred;
+		}
+	}
+}
+

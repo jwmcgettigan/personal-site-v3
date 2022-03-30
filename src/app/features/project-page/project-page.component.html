@@ -1,12 +1,33 @@
-<div class="leftColumn">
-	<div class="blogEntries">
-		<div class="blogEntry">
-			<markdown
-				lineNumbers
-				[src]="'assets/projects/' + file"
-			>
-			</markdown>
+<!-- <app-large-project-card
+	[project]="project"
+></app-large-project-card>
+<div class="twoColumns">
+	<div class="leftColumn">
+		<div class="devlog">
+			Devlog
+		</div>
+		<div class="blogEntries">
+			<app-blog-preview-card 
+				*ngFor="let blogEntry of blogEntries"
+				[blogEntry]="blogEntry"
+			></app-blog-preview-card>
 		</div>
 	</div>
+	<app-right-column></app-right-column>
+</div> -->
+
+<app-large-project-card
+	*ngIf="project"
+	[project]="project"
+></app-large-project-card>
+<div class="leftColumn">
+	<div class="devlog">
+		Devlog
+	</div>
+	<div class="blogEntries">
+		<app-blog-preview-card 
+			*ngFor="let blogEntry of blogEntries"
+			[blogEntry]="blogEntry"
+		></app-blog-preview-card>
+	</div>
 </div>
-<app-right-column></app-right-column>
