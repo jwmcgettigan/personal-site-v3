@@ -21,6 +21,37 @@
 	flex-wrap: wrap;
 	justify-content: center;
 
+	/* app-project-card {
+		flex: 1 1 auto;
+
+		::ng-deep .projectCard {
+			max-width: none;
+
+			.media {
+				min-width: 200px;
+				width: auto;
+				max-height: 200px;
+				background: black;
+
+				img {
+					object-fit: contain;
+				}
+			}
+			.description {
+				height: 120px;
+				p {
+					font-size: inherit !important;
+				}
+				@media (max-width: 647px) {
+					height: 100px;
+				}
+				@media (max-width: 435px) {
+					height: 80px;
+				}
+			}
+		}
+	} */
+
 	@media (max-width: 650px) {
 		//display: grid;
 		//justify-content: flex-start;
@@ -28,6 +59,10 @@
 	}
 	
 	@media (max-width: 550px) {
+		//grid-template-columns: 1fr 1fr;
+	}
+
+	@media (max-width: 436px) {
 		//grid-template-columns: 1fr 1fr;
 	}
 }
