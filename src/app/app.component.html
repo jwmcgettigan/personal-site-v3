@@ -24,3 +24,42 @@
   <router-outlet></router-outlet>
   <app-right-column *ngIf="route !== '/projects'"></app-right-column>
 </main>
+
+<footer>
+  <div class="section">
+    <h4>ME</h4>
+    <div class="links">
+      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+      <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Projects</a>
+      <a routerLink="/resume" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Resume</a>
+      <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About</a>
+    </div>
+  </div>
+  <div class="section">
+    <h4>THIS SITE</h4>
+    <div class="links">
+      <a href="https://angular.io/"><img style="right:-0.15rem;" src="https://angular.io/assets/images/favicons/favicon.ico">Angular</a>
+      <a href="https://strapi.io/"><img src="https://strapi.io/assets/favicon-32x32.png">Strapi</a>
+      <a href="https://www.mysql.com/"><img src="https://labs.mysql.com/common/themes/sakila/favicon.ico">MySQL</a>
+      <a href="https://www.digitalocean.com/"><img src="https://www.digitalocean.com/_next/static/media/favicon-32x32.b7ef9ede.png">DigitalOcean</a>
+    </div>
+  </div>
+  <div class="section">
+    <h4>INSPIRATION</h4>
+    <div class="links">
+      <a href="https://playdeck.net/">Site Concept</a>
+      <a href="https://rezaarkan.com/">Font & Aesthetic</a>
+      <a href="https://www.nayuki.io/">Content</a>
+      <a href="https://chriswray.dev/">Footer</a>
+    </div>
+  </div>
+  <div class="vertical-divider"></div>
+  <div class="info">
+    <p>This site is hosted on a <a href="https://www.digitalocean.com/solutions/vps-hosting">DigitalOcean VPS</a>. </p>
+    <p>I've currently released the source code for the following parts of my site.</p>
+    <ul><li><a href="https://github.com/jwmcgettigan/personal-site-v3"><fa-icon [icon]="faGithub"></fa-icon>Angular Frontend</a></li></ul>
+    <span class="copyright">
+      © {{copyrightYears}} Justin McGettigan. All rights reserved.
+    </span>
+  </div>
+</footer>
