@@ -2,7 +2,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Project } from './shared/models/project.model';
 import { Component, OnInit, SecurityContext, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { faDev, faFreeCodeCamp, faGithubAlt, faGithubSquare, faLinkedinIn, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
+import { faDev, faFreeCodeCamp, faGithub, faGithubAlt, faGithubSquare, faLinkedinIn, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import { PdfViewerComponent } from 'ng2-pdf-viewer';
 import { filter } from 'rxjs/operators';
@@ -21,7 +21,18 @@ export class AppComponent implements OnInit {
   //htmlResume: any;
 
   faGithubAlt = faGithubAlt;
+  faGithub = faGithub;
   route: string;
+
+  get copyrightYears(): string {
+    const startYear = 2022;
+    const currentYear = (new Date()).getFullYear();
+    if (startYear === currentYear) {
+      return `${startYear}`;
+    } else {
+      return `${startYear} - ${currentYear}`;
+    }
+  }
 
   constructor(
     private sanitizer: DomSanitizer,
