@@ -12,11 +12,20 @@
   grid-template-columns: 200px 1fr;
   border-radius: 5px;
 
+  @media (max-width: 385px) {
+    grid-template-columns: 1fr;
+  }
+
   ::ng-deep .media {
 		height: 100%;
     min-height: 200px;
 		width: 200px;
     border-radius: 5px 0 0 5px;
+
+    @media (max-width: 385px) {
+      width: auto;
+      border-radius: 5px 5px 0 0;
+    }
 	}
 
   .project-body {

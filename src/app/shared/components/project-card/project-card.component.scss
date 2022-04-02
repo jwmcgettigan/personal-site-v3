@@ -12,6 +12,8 @@
 
 	max-width: 200px;
 	border-radius: 5px;
+	//border: 1px solid rgb(255,255,255,0.17);
+	//box-sizing: content-box;
 
 	::ng-deep .media {
 		min-height: 200px;
@@ -25,6 +27,7 @@
 	}
 
 	.description {
+		//border: 1px solid rgb(255,255,255,0.47);
 		display: grid;
 		align-content: flex-start;
 		padding: 7px 5px 0 5px;

@@ -1,6 +1,8 @@
 :host {
 
 	::ng-deep markdown {
+		padding: 1rem;
+		border-radius: 5px;
 
 		img, video {
 			max-width: 100%;
@@ -22,6 +24,7 @@
 
 	.blogEntry {
 		background: #5f6b6b;
+		border-radius: 5px;
 		//padding: 1rem 2rem 1.5rem 2rem;
 
 		//min-height: 30rem;
